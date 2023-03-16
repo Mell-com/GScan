@@ -3,8 +3,8 @@ BINDIR=bin
 TARGET=target
 VERSION=$(shell git describe --tags --always || echo "unknown version")
 BUILDTIME=$(shell date -u)
-GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/Ymjie/GScan/constant.Version=$(VERSION)" \
-		-X "github.com/Ymjie/GScan/constant.BuildTime=$(BUILDTIME)" \
+GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/Mell-com/GScan/constant.Version=$(VERSION)" \
+		-X "github.com/Mell-com/GScan/constant.BuildTime=$(BUILDTIME)" \
 		-w -s -buildid='
 
 PLATFORM_LIST = \
